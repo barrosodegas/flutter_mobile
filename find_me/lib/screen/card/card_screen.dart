@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:find_me/common/custom_bottom_navigator_bar_widget.dart';
 import 'package:find_me/model/card_item.dart';
 import 'package:find_me/screen/card/component/card_item_widget.dart';
 import 'package:find_me/service/card_animals_service.dart';
@@ -15,13 +14,11 @@ enum CardType { FRUIT, ANIMALS, VEGETABLES }
 class CardScreen extends StatefulWidget {
 
   final Color color;
-  final int selectedItem;
   final CardType cardType;
 
   CardScreen({
     Key key,
     this.color,
-    this.selectedItem,
     this.cardType,
   }) : super(key: key);
 
@@ -83,7 +80,6 @@ class _CardScreenState extends State<CardScreen> {
         ),
         centerTitle: true,
       ),
-      bottomNavigationBar: CustomBottomNavigatorBarWidget(selectedItem: widget.selectedItem,),
       body: Consumer3<CardFruitService, CardAnimalsService, CardVegetablesService>(
         builder: (_, __, ___, ____, _____) {
 
