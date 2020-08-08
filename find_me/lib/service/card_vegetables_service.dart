@@ -8,8 +8,8 @@ class CardVegetablesService extends ChangeNotifier implements CardService {
   final List<String> pairItems = [];
   int _counter = 0;
 
-  CardVegetablesService(List<CardItem> cardItems) {
-    this.cardItems = cardItems;
+  CardVegetablesService() {
+    this.cardItems = _getVegetables();
     pairItems.clear();
   }
 
@@ -52,5 +52,68 @@ class CardVegetablesService extends ChangeNotifier implements CardService {
     }
     return flip;
   }
+
+  List<CardItem> _getVegetables() => [
+    CardItem(
+        'carrot',
+        title: 'Cenoura',
+        imageAsset: 'images/vegetables/carrot.png'
+    ),
+    CardItem(
+        'beet',
+        title: 'Beterraba',
+        imageAsset: 'images/vegetables/beet.png'
+    ),
+    CardItem(
+        'broccoli',
+        title: 'Brócolis',
+        imageAsset: 'images/vegetables/broccoli.png'
+    ),
+    CardItem(
+        'lettuce',
+        title: 'Alface',
+        imageAsset: 'images/vegetables/lettuce.png'
+    ),
+    CardItem(
+        'pod',
+        title: 'Vagem',
+        imageAsset: 'images/vegetables/pod.png'
+    ),
+    CardItem(
+        'pumpkin',
+        title: 'Abóbora',
+        imageAsset: 'images/vegetables/pumpkin.png'
+    ),
+    CardItem(
+        'carrot',
+        title: 'Cenoura',
+        imageAsset: 'images/vegetables/carrot.png'
+    ),
+    CardItem(
+        'beet',
+        title: 'Beterraba',
+        imageAsset: 'images/vegetables/beet.png'
+    ),
+    CardItem(
+        'broccoli',
+        title: 'Brócolis',
+        imageAsset: 'images/vegetables/broccoli.png'
+    ),
+    CardItem(
+        'lettuce',
+        title: 'Alface',
+        imageAsset: 'images/vegetables/lettuce.png'
+    ),
+    CardItem(
+        'pod',
+        title: 'Vagem',
+        imageAsset: 'images/vegetables/pod.png'
+    ),
+    CardItem(
+        'pumpkin',
+        title: 'Abóbora',
+        imageAsset: 'images/vegetables/pumpkin.png'
+    ),
+  ];
 
 }

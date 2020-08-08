@@ -8,8 +8,8 @@ class CardAnimalsService extends ChangeNotifier implements CardService {
   final List<String> pairItems = [];
   int _counter = 0;
 
-  CardAnimalsService(List<CardItem> cardItems) {
-    this.cardItems = cardItems;
+  CardAnimalsService() {
+    this.cardItems = _getAnimals();
     pairItems.clear();
   }
 
@@ -52,5 +52,68 @@ class CardAnimalsService extends ChangeNotifier implements CardService {
     }
     return flip;
   }
+
+  List<CardItem> _getAnimals() => [
+    CardItem(
+        'butterfly',
+        title: 'Borboleta',
+        imageAsset: 'images/animals/butterfly.png'
+    ),
+    CardItem(
+        'cat',
+        title: 'Gato',
+        imageAsset: 'images/animals/cat.png'
+    ),
+    CardItem(
+        'dog',
+        title: 'Cachorro',
+        imageAsset: 'images/animals/dog.png'
+    ),
+    CardItem(
+        'monkey',
+        title: 'Macaco',
+        imageAsset: 'images/animals/monkey.png'
+    ),
+    CardItem(
+        'parrot',
+        title: 'Papagaio',
+        imageAsset: 'images/animals/parrot.png'
+    ),
+    CardItem(
+        'whale',
+        title: 'Baleia',
+        imageAsset: 'images/animals/whale.png'
+    ),
+    CardItem(
+        'butterfly',
+        title: 'Borboleta',
+        imageAsset: 'images/animals/butterfly.png'
+    ),
+    CardItem(
+        'cat',
+        title: 'Gato',
+        imageAsset: 'images/animals/cat.png'
+    ),
+    CardItem(
+        'dog',
+        title: 'Cachorro',
+        imageAsset: 'images/animals/dog.png'
+    ),
+    CardItem(
+        'monkey',
+        title: 'Macaco',
+        imageAsset: 'images/animals/monkey.png'
+    ),
+    CardItem(
+        'parrot',
+        title: 'Papagaio',
+        imageAsset: 'images/animals/parrot.png'
+    ),
+    CardItem(
+        'whale',
+        title: 'Baleia',
+        imageAsset: 'images/animals/whale.png'
+    ),
+  ];
 
 }

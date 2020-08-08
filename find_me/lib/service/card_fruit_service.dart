@@ -8,8 +8,8 @@ class CardFruitService extends ChangeNotifier implements CardService {
   final List<String> pairItems = [];
   int _counter = 0;
 
-  CardFruitService(List<CardItem> cardItems) {
-    this.cardItems = cardItems;
+  CardFruitService() {
+    this.cardItems = _getFruit();
     pairItems.clear();
   }
 
@@ -52,5 +52,68 @@ class CardFruitService extends ChangeNotifier implements CardService {
     }
     return flip;
   }
+
+  List<CardItem> _getFruit() => [
+    CardItem(
+        'apple',
+        title: 'Maçã',
+        imageAsset: 'images/fruit/apple.png'
+    ),
+    CardItem(
+        'banana',
+        title: 'Banana',
+        imageAsset: 'images/fruit/banana.png'
+    ),
+    CardItem(
+        'grape',
+        title: 'Uva',
+        imageAsset: 'images/fruit/grape.png'
+    ),
+    CardItem(
+        'orange',
+        title: 'Laranja',
+        imageAsset: 'images/fruit/orange.png'
+    ),
+    CardItem(
+        'pineapple',
+        title: 'Abacaxi',
+        imageAsset: 'images/fruit/pineapple.png'
+    ),
+    CardItem(
+        'watermelon',
+        title: 'Melancia',
+        imageAsset: 'images/fruit/watermelon.png'
+    ),
+    CardItem(
+        'apple',
+        title: 'Maçã',
+        imageAsset: 'images/fruit/apple.png'
+    ),
+    CardItem(
+        'banana',
+        title: 'Banana',
+        imageAsset: 'images/fruit/banana.png'
+    ),
+    CardItem(
+        'grape',
+        title: 'Uva',
+        imageAsset: 'images/fruit/grape.png'
+    ),
+    CardItem(
+        'orange',
+        title: 'Laranja',
+        imageAsset: 'images/fruit/orange.png'
+    ),
+    CardItem(
+        'pineapple',
+        title: 'Abacaxi',
+        imageAsset: 'images/fruit/pineapple.png'
+    ),
+    CardItem(
+        'watermelon',
+        title: 'Melancia',
+        imageAsset: 'images/fruit/watermelon.png'
+    ),
+  ];
 
 }

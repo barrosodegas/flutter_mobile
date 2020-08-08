@@ -11,29 +11,20 @@ import 'package:provider/provider.dart';
 
 enum CardType { FRUIT, ANIMALS, VEGETABLES }
 
-class CardScreen extends StatefulWidget {
-
-  final Color color;
-  final CardType cardType;
-
-  CardScreen({
-    Key key,
-    this.color,
-    this.cardType,
-  }) : super(key: key);
-
-  @override
-  _CardScreenState createState() => _CardScreenState();
-}
-
-class _CardScreenState extends State<CardScreen> {
+class CardScreen extends StatelessWidget {
 
   final List<int> indexes = [];
+  final CardType cardType;
+  final Color color;
+
+  CardScreen({Key key, this.cardType, this.color}) : super(key: key) {
+    _randomIndexes();
+  }
 
   CardService _getCardServiceByType(BuildContext context) {
 
     CardService cardService;
-    switch(widget.cardType) {
+    switch(cardType) {
       case CardType.FRUIT:
         cardService = context.watch<CardFruitService>();
         break;
@@ -55,12 +46,6 @@ class _CardScreenState extends State<CardScreen> {
         indexes.add(i);
       }
     }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _randomIndexes();
   }
 
   @override
@@ -90,81 +75,45 @@ class _CardScreenState extends State<CardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[0]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[1]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[2]],
-                      cardService: cardService,
-                    ),
+                    for (int i = 0; i < 3; i++)
+                      CardItemWidget(
+                        color: color,
+                        cardItem: cardItems[indexes[i]],
+                        cardService: cardService,
+                      ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[3]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[4]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[5]],
-                      cardService: cardService,
-                    ),
+                    for (int i = 3; i < 6; i++)
+                      CardItemWidget(
+                        color: color,
+                        cardItem: cardItems[indexes[i]],
+                        cardService: cardService,
+                      ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[6]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[7]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[8]],
-                      cardService: cardService,
-                    ),
+                    for (int i = 6; i < 9; i++)
+                      CardItemWidget(
+                        color: color,
+                        cardItem: cardItems[indexes[i]],
+                        cardService: cardService,
+                      ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[9]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[10]],
-                      cardService: cardService,
-                    ),
-                    CardItemWidget(
-                      color: widget.color,
-                      cardItem: cardItems[indexes[11]],
-                      cardService: cardService,
-                    ),
+                    for (int i = 9; i < 12; i++)
+                      CardItemWidget(
+                        color: color,
+                        cardItem: cardItems[indexes[i]],
+                        cardService: cardService,
+                      ),
                   ],
                 ),
               ],
