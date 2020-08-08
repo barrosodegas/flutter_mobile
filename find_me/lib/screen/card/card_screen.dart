@@ -8,6 +8,7 @@ import 'package:find_me/service/card_service.dart';
 import 'package:find_me/service/card_vegetables_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 enum CardType { FRUIT, ANIMALS, VEGETABLES }
 
@@ -16,8 +17,9 @@ class CardScreen extends StatelessWidget {
   final List<int> indexes = [];
   final CardType cardType;
   final Color color;
+  final SharedPreferences storage;
 
-  CardScreen({Key key, this.cardType, this.color}) : super(key: key) {
+  CardScreen({Key key, this.cardType, this.color, this.storage}) : super(key: key) {
     _randomIndexes();
   }
 
@@ -116,6 +118,48 @@ class CardScreen extends StatelessWidget {
                       ),
                   ],
                 ),
+                if (cardService is CardFruitService)
+                  Container(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: Text(
+                        'Pontos Frutas: ${(storage.getInt("score_fruit") ?? 0)}',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    )
+                  )
+                else if (cardService is CardAnimalsService)
+                  Container(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Text(
+                          'Pontos Animais: ${(storage.getInt("score_animals") ?? 0)}',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                  )
+                else
+                  Container(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Text(
+                          'Pontos Vegetais: ${(storage.getInt("score_vegetables") ?? 0)}',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                  ),
               ],
             ),
           );

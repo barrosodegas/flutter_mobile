@@ -1,14 +1,17 @@
 import 'package:find_me/model/card_item.dart';
 import 'package:find_me/service/card_service.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CardFruitService extends ChangeNotifier implements CardService {
 
-  List<CardItem> cardItems;
   final List<String> pairItems = [];
+  final SharedPreferences storage;
+
+  List<CardItem> cardItems;
   int _counter = 0;
 
-  CardFruitService() {
+  CardFruitService(this.storage) {
     this.cardItems = _getFruit();
     pairItems.clear();
   }
@@ -30,6 +33,7 @@ class CardFruitService extends ChangeNotifier implements CardService {
 
       if (count == 2) {
         pairItems.add(cardItem.code);
+        storage.setInt('score_fruit', (storage.getInt("score_fruit") ?? 0) + 1);
       }
       _counter++;
     }

@@ -1,7 +1,12 @@
 import 'package:find_me/screen/card/card_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
+
+  final SharedPreferences storage;
+
+  const HomeScreen({Key key, this.storage}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -10,6 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   final PageController pageController = PageController();
+
+  SharedPreferences get storage => widget.storage;
 
   @override
   void dispose() {
@@ -28,14 +35,17 @@ class _HomeScreenState extends State<HomeScreen> {
           CardScreen(
             color: Colors.blue,
             cardType: CardType.FRUIT,
+            storage: storage,
           ),
           CardScreen(
             color: Colors.blue,
             cardType: CardType.ANIMALS,
+            storage: storage,
           ),
           CardScreen(
             color: Colors.blue,
             cardType: CardType.VEGETABLES,
+            storage: storage,
           ),
         ],
       ),
