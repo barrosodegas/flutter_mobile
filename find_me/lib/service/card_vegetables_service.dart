@@ -61,62 +61,62 @@ class CardVegetablesService extends ChangeNotifier implements CardService {
     CardItem(
         'carrot',
         title: 'Cenoura',
-        imageAsset: 'images/vegetables/carrot.png'
+        imageAsset: 'assets/images/vegetables/carrot.png'
     ),
     CardItem(
         'beet',
         title: 'Beterraba',
-        imageAsset: 'images/vegetables/beet.png'
+        imageAsset: 'assets/images/vegetables/beet.png'
     ),
     CardItem(
         'broccoli',
         title: 'Brócolis',
-        imageAsset: 'images/vegetables/broccoli.png'
+        imageAsset: 'assets/images/vegetables/broccoli.png'
     ),
     CardItem(
         'lettuce',
         title: 'Alface',
-        imageAsset: 'images/vegetables/lettuce.png'
+        imageAsset: 'assets/images/vegetables/lettuce.png'
     ),
     CardItem(
         'pod',
         title: 'Vagem',
-        imageAsset: 'images/vegetables/pod.png'
+        imageAsset: 'assets/images/vegetables/pod.png'
     ),
     CardItem(
         'pumpkin',
         title: 'Abóbora',
-        imageAsset: 'images/vegetables/pumpkin.png'
+        imageAsset: 'assets/images/vegetables/pumpkin.png'
     ),
     CardItem(
         'carrot',
         title: 'Cenoura',
-        imageAsset: 'images/vegetables/carrot.png'
+        imageAsset: 'assets/images/vegetables/carrot.png'
     ),
     CardItem(
         'beet',
         title: 'Beterraba',
-        imageAsset: 'images/vegetables/beet.png'
+        imageAsset: 'assets/images/vegetables/beet.png'
     ),
     CardItem(
         'broccoli',
         title: 'Brócolis',
-        imageAsset: 'images/vegetables/broccoli.png'
+        imageAsset: 'assets/images/vegetables/broccoli.png'
     ),
     CardItem(
         'lettuce',
         title: 'Alface',
-        imageAsset: 'images/vegetables/lettuce.png'
+        imageAsset: 'assets/images/vegetables/lettuce.png'
     ),
     CardItem(
         'pod',
         title: 'Vagem',
-        imageAsset: 'images/vegetables/pod.png'
+        imageAsset: 'assets/images/vegetables/pod.png'
     ),
     CardItem(
         'pumpkin',
         title: 'Abóbora',
-        imageAsset: 'images/vegetables/pumpkin.png'
+        imageAsset: 'assets/images/vegetables/pumpkin.png'
     ),
   ];
 

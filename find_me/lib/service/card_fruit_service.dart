@@ -61,62 +61,62 @@ class CardFruitService extends ChangeNotifier implements CardService {
     CardItem(
         'apple',
         title: 'Maçã',
-        imageAsset: 'images/fruit/apple.png'
+        imageAsset: 'assets/images/fruit/apple.png'
     ),
     CardItem(
         'banana',
         title: 'Banana',
-        imageAsset: 'images/fruit/banana.png'
+        imageAsset: 'assets/images/fruit/banana.png'
     ),
     CardItem(
         'grape',
         title: 'Uva',
-        imageAsset: 'images/fruit/grape.png'
+        imageAsset: 'assets/images/fruit/grape.png'
     ),
     CardItem(
         'orange',
         title: 'Laranja',
-        imageAsset: 'images/fruit/orange.png'
+        imageAsset: 'assets/images/fruit/orange.png'
     ),
     CardItem(
         'pineapple',
         title: 'Abacaxi',
-        imageAsset: 'images/fruit/pineapple.png'
+        imageAsset: 'assets/images/fruit/pineapple.png'
     ),
     CardItem(
         'watermelon',
         title: 'Melancia',
-        imageAsset: 'images/fruit/watermelon.png'
+        imageAsset: 'assets/images/fruit/watermelon.png'
     ),
     CardItem(
         'apple',
         title: 'Maçã',
-        imageAsset: 'images/fruit/apple.png'
+        imageAsset: 'assets/images/fruit/apple.png'
     ),
     CardItem(
         'banana',
         title: 'Banana',
-        imageAsset: 'images/fruit/banana.png'
+        imageAsset: 'assets/images/fruit/banana.png'
     ),
     CardItem(
         'grape',
         title: 'Uva',
-        imageAsset: 'images/fruit/grape.png'
+        imageAsset: 'assets/images/fruit/grape.png'
     ),
     CardItem(
         'orange',
         title: 'Laranja',
-        imageAsset: 'images/fruit/orange.png'
+        imageAsset: 'assets/images/fruit/orange.png'
     ),
     CardItem(
         'pineapple',
         title: 'Abacaxi',
-        imageAsset: 'images/fruit/pineapple.png'
+        imageAsset: 'assets/images/fruit/pineapple.png'
     ),
     CardItem(
         'watermelon',
         title: 'Melancia',
-        imageAsset: 'images/fruit/watermelon.png'
+        imageAsset: 'assets/images/fruit/watermelon.png'
     ),
   ];
 

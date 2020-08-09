@@ -29,7 +29,7 @@ class CardFrontWidget extends StatelessWidget {
               fontSize: 56,
               fontWeight: FontWeight.bold,
             ),
-          ), // Image.asset('images/card_front.png'),
+          ),
         ),
       ),
     );

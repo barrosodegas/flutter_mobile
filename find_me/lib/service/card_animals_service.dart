@@ -61,62 +61,62 @@ class CardAnimalsService extends ChangeNotifier implements CardService {
     CardItem(
         'butterfly',
         title: 'Borboleta',
-        imageAsset: 'images/animals/butterfly.png'
+        imageAsset: 'assets/images/animals/butterfly.png'
     ),
     CardItem(
         'cat',
         title: 'Gato',
-        imageAsset: 'images/animals/cat.png'
+        imageAsset: 'assets/images/animals/cat.png'
     ),
     CardItem(
         'dog',
         title: 'Cachorro',
-        imageAsset: 'images/animals/dog.png'
+        imageAsset: 'assets/images/animals/dog.png'
     ),
     CardItem(
         'monkey',
         title: 'Macaco',
-        imageAsset: 'images/animals/monkey.png'
+        imageAsset: 'assets/images/animals/monkey.png'
     ),
     CardItem(
         'parrot',
         title: 'Papagaio',
-        imageAsset: 'images/animals/parrot.png'
+        imageAsset: 'assets/images/animals/parrot.png'
     ),
     CardItem(
         'whale',
         title: 'Baleia',
-        imageAsset: 'images/animals/whale.png'
+        imageAsset: 'assets/images/animals/whale.png'
     ),
     CardItem(
         'butterfly',
         title: 'Borboleta',
-        imageAsset: 'images/animals/butterfly.png'
+        imageAsset: 'assets/images/animals/butterfly.png'
     ),
     CardItem(
         'cat',
         title: 'Gato',
-        imageAsset: 'images/animals/cat.png'
+        imageAsset: 'assets/images/animals/cat.png'
     ),
     CardItem(
         'dog',
         title: 'Cachorro',
-        imageAsset: 'images/animals/dog.png'
+        imageAsset: 'assets/images/animals/dog.png'
     ),
     CardItem(
         'monkey',
         title: 'Macaco',
-        imageAsset: 'images/animals/monkey.png'
+        imageAsset: 'assets/images/animals/monkey.png'
     ),
     CardItem(
         'parrot',
         title: 'Papagaio',
-        imageAsset: 'images/animals/parrot.png'
+        imageAsset: 'assets/images/animals/parrot.png'
     ),
     CardItem(
         'whale',
         title: 'Baleia',
-        imageAsset: 'images/animals/whale.png'
+        imageAsset: 'assets/images/animals/whale.png'
     ),
   ];
 
