@@ -3,9 +3,17 @@ import 'package:flutter/material.dart';
 class CardFrontWidget extends StatelessWidget {
 
   final Function() onTap;
-  Color color;
+  final Color color;
+  final double cardWidth;
+  final double cardHeight;
 
-  CardFrontWidget({Key key, this.color, this.onTap}) : super(key: key);
+  CardFrontWidget({
+    Key key,
+    this.color,
+    @required this.cardWidth,
+    @required this.cardHeight,
+    this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +27,14 @@ class CardFrontWidget extends StatelessWidget {
         ),
         child: Container(
           alignment: Alignment.center,
-          height: 110,
-          width: 80,
+          height: cardHeight,
+          width: cardWidth,
           color: color,
-          child: const Text(
+          child: Text(
             '?',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 56,
+              fontSize: cardWidth / 1.5,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:find_me/helper/size_screen_helper.dart';
 import 'package:find_me/model/card_item.dart';
 import 'package:find_me/screen/card/component/card_item_widget.dart';
 import 'package:find_me/service/card_animals_service.dart';
@@ -56,6 +57,11 @@ class CardScreen extends StatelessWidget {
     final CardService cardService = _getCardServiceByType(context);
     final List<CardItem> cardItems = cardService.getAllCardItems();
 
+    double widthScreen = MediaQuery.of(context).size.width;
+    double heightScreen = MediaQuery.of(context).size.height;
+    final cardWidth = SizeScreenHelper.getWidthByWidthScreen(widthScreen);
+    final cardHeight = SizeScreenHelper.getHeightByHeightScreen(heightScreen);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -82,6 +88,8 @@ class CardScreen extends StatelessWidget {
                         color: color,
                         cardItem: cardItems[indexes[i]],
                         cardService: cardService,
+                        cardWidth: cardWidth,
+                        cardHeight: cardHeight,
                       ),
                   ],
                 ),
@@ -93,6 +101,8 @@ class CardScreen extends StatelessWidget {
                         color: color,
                         cardItem: cardItems[indexes[i]],
                         cardService: cardService,
+                        cardWidth: cardWidth,
+                        cardHeight: cardHeight,
                       ),
                   ],
                 ),
@@ -104,6 +114,8 @@ class CardScreen extends StatelessWidget {
                         color: color,
                         cardItem: cardItems[indexes[i]],
                         cardService: cardService,
+                        cardWidth: cardWidth,
+                        cardHeight: cardHeight,
                       ),
                   ],
                 ),
@@ -115,6 +127,8 @@ class CardScreen extends StatelessWidget {
                         color: color,
                         cardItem: cardItems[indexes[i]],
                         cardService: cardService,
+                        cardWidth: cardWidth,
+                        cardHeight: cardHeight,
                       ),
                   ],
                 ),

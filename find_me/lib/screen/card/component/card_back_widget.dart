@@ -4,14 +4,18 @@ import 'package:flutter/widgets.dart';
 
 class CardBackWidget extends StatelessWidget {
 
-  Color color;
-  CardItem cardItem;
+  final Color color;
+  final CardItem cardItem;
   final Function() onTap;
+  final double cardWidth;
+  final double cardHeight;
 
   CardBackWidget({
     Key key,
     this.color,
     this.cardItem,
+    @required this.cardWidth,
+    @required this.cardHeight,
     this.onTap,
   }) : super(key: key);
 
@@ -27,16 +31,20 @@ class CardBackWidget extends StatelessWidget {
         ),
         child: Container(
           padding: const EdgeInsets.all(8),
-          height: 110,
-          width: 80,
+          height: cardHeight,
+          width: cardWidth,
           color: color,
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.only(top: 8),
+                padding: EdgeInsets.only(top: cardHeight * 0.58 > 105 ? 8 : 1),
                 alignment: Alignment.topCenter,
-                child: Image.asset(cardItem.imageAsset, height: 70, width: 70,),
+                child: Image.asset(
+                  cardItem.imageAsset,
+                  height: cardHeight * 0.58,
+                  width: cardWidth * 0.58,
+                ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,
@@ -44,7 +52,9 @@ class CardBackWidget extends StatelessWidget {
                   cardItem.title,
                   style: TextStyle(
                     color: Colors.white,
+                    fontSize: cardWidth / 6,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],

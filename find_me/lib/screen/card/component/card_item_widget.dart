@@ -10,12 +10,16 @@ class CardItemWidget extends StatefulWidget {
   final Color color;
   final CardItem cardItem;
   final CardService cardService;
+  final double cardWidth;
+  final double cardHeight;
 
   CardItemWidget({
     Key key,
     this.color,
     this.cardItem,
     @required this.cardService,
+    @required this.cardWidth,
+    @required this.cardHeight,
   }) : super(key: key);
 
   @override
@@ -59,6 +63,8 @@ class _CardItemWidgetState extends State<CardItemWidget> {
       speed: 800,
       front: CardFrontWidget(
         color: widget.color,
+        cardWidth: widget.cardWidth,
+        cardHeight: widget.cardHeight,
         onTap: () {
           _flipCardItemKey.currentState.toggleCard();
           if (item.faceUp) {
@@ -72,6 +78,8 @@ class _CardItemWidgetState extends State<CardItemWidget> {
       back: CardBackWidget(
         color: widget.color,
         cardItem: widget.cardItem,
+        cardWidth: widget.cardWidth,
+        cardHeight: widget.cardHeight,
         onTap: () {
           if (!service.cardItemAlreadyContainsPair(item.code)) {
             if (item.faceUp) {
