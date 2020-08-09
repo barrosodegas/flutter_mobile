@@ -38,7 +38,7 @@ class CardBackWidget extends StatelessWidget {
             fit: StackFit.expand,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: cardHeight * 0.58 > 105 ? 8 : 1),
+                padding: EdgeInsets.only(top: cardHeight > 100 ? 8 : 1),
                 alignment: Alignment.topCenter,
                 child: Image.asset(
                   cardItem.imageAsset,
